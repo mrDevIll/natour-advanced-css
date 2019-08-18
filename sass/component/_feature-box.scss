@@ -20,7 +20,7 @@
         -webkit-background-clip: text;
         color: transparent;
 
-        @include(tab-port){
+        @include resp(tab-port){
             margin: 0;
         }
 
