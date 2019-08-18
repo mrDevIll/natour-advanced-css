@@ -23,7 +23,8 @@ body{
         animation-duration: 1s;
         
         @include resp(phone){
-            letter-spacing: .5rem;    
+            letter-spacing: .5rem; 
+            font-size: 5rem;   
         }
     }
     &--sub{
@@ -33,6 +34,10 @@ body{
         letter-spacing: 0.5rem;
         animation-name: moveInRight;
         animation-duration: 1s;
+    }
+    @include resp(phone){
+        letter-spacing: .5rem;
+
     }
 }
 
