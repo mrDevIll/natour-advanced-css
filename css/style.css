@@ -1,3 +1,34 @@
+/*
+media query manager
+phones 0-600px
+ 600px-900px tablet portrait
+ 900px-1200px tablet landscape
+{1200-1800} default styles
+1800px +
+breakpoint argument choice:
+-phone
+-tab-port
+-tab-land
+-big-desktop
+*/
+/*
+media query manager
+phones 0-600px
+ 600px-900px tablet portrait
+ 900px-1200px tablet landscape
+{1200-1800} default styles
+1800px +
+*/
+/*
+breakpoint argument choice:
+-phone
+-tab-port
+-tab-land
+-big-desktop
+
+ORDER: Base + typography > general layout +grid > page layout > component
+
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -34,17 +65,26 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
-  box-sizing: inherit; }
+  box-sizing: border-box;
+  padding: 3rem; }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: #777;
-  padding: 3rem; }
+  color: #777; }
 
 .heading-primary {
   color: #fff;

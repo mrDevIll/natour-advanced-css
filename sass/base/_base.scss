@@ -6,9 +6,25 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box;
+
+    @include resp(tab-land){
+        font-size: 56.25%; //1 rem=9px, 8/16 = 56.25%
+    }
+    @include resp(tab-port){
+        font-size: 50%; //1 rem=8px, 8/16 = 50%
+    }
+    @include resp(big-desktop){
+        font-size: 75%; //1 rem=8px, 12/16 = 75%
+    }
 }
 
 body{
-   box-sizing: inherit;
+   box-sizing: border-box;
+   padding: 3rem;
+
+   @include resp(tab-port){
+       padding: 0;
+   }
+
 
 }

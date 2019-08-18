@@ -4,6 +4,10 @@
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+
+        @include resp(tab-port){
+            margin-bottom: $gutter-vertical-small !important;
+        }
     }
     
     @include clearfix;
@@ -13,6 +17,14 @@
 
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+
+        @include resp(tab-port){
+            margin-right: 0 !important;
+        }
+        }
+
+        @include resp(tab-port){
+            width: 100% !important;
         }
     }
 
